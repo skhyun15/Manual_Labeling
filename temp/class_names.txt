@@ -1,0 +1,15 @@
+_background_
+Skull
+Clavicle
+Sternum
+Whole vertebrae
+Rib Lt
+Rib Rt
+Scapula Lt
+Scapula Rt
+Humerus Lt
+Humerus Rt
+Sacrum
+Pelvis
+Femur Lt
+Femur Rt

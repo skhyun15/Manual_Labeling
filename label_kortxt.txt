@@ -1,0 +1,28 @@
+ANT POST 다르게 할 필요가 있을까??....
+배경
+skull
+ribs lt
+ribs rt
+whole vertebrae
+pelvis
+femur lt
+femur rt
+sacrum
+humerus lt
+humerus rt
+shoulder blade lt
+shoulder blade rt
+Clavicle
+Sternum
+
+신장을 넣어야 할까??
+
+
+
+
+
+
+python labelme2voc.py testjson/ ./temp3 --labels test_label.txt
+
+pip install labelme==5.3.0
+15class
