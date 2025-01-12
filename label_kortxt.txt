@@ -10,8 +10,8 @@ femur rt
 sacrum
 humerus lt
 humerus rt
-shoulder blade lt
-shoulder blade rt
+Scapula lt
+Scapula rt
 Clavicle
 Sternum
 
