@@ -76,8 +76,10 @@ def main():
     with open(out_class_names_file, "w") as f:
         f.writelines("\n".join(class_names))
     print("Saved class_names:", out_class_names_file)
-
-    for filename in sorted(glob.glob(osp.join(args.input_dir, "*.json"))):
+    # for filename in sorted(glob.glob(osp.join(args.input_dir, "*.json"))):
+    for filename in sorted(
+        glob.glob(osp.join(args.input_dir, "**", "*.json"), recursive=True)
+    ):
         print("Generating dataset from:", filename)
 
         label_file = labelme.LabelFile(filename=filename)
