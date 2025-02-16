@@ -121,9 +121,17 @@ def main():
             "Ribs Rt",
         ]
 
+        denied_classes = [
+            "Clavicle",
+            "Sternum",
+            "Scapula Lt",
+            "Scapula Rt",
+            "Sacrum",
+        ]
+
         # JSON에 들어있는 shapes 중 allowed_classes에 해당하는 것만 남김
         filtered_shapes = [
-            s for s in label_file.shapes if s["label"] in allowed_classes
+            s for s in label_file.shapes if s["label"] not in denied_classes
         ]
 
         cls, ins = labelme.utils.shapes_to_label(
