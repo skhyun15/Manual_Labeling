@@ -18,6 +18,9 @@ Sternum
 신장을 넣어야 할까?? 
 occuring staete  
 
+scapula, clavicle, sternum 
+처럼 근거가 불명확한 것 배기
+UNet loss 논문 근거좀
 
 
 
