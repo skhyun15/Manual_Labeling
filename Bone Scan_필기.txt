@@ -1,0 +1,45 @@
+Bone Scan
+LLM 통해서 핫스팟의 해부학적 위치로 표현해주는
+
+84869#연구실
+
+템플릿 registration??
+
+
+python3 -m venv nhenv
+
+normal, xnor 뭉뜽그려서 2class로 생각
+
+
+20, 20
+
+5, 5
+
+tanh 통과, crop까지 완료하고 난 결과를 jpg로
+
+MAS Segmentation
+
+scp -r nhcho@103.22.220.93:/projects3/pi/nhcho/Sev_WBBS/skhyun/segmentation/Manual_Label/pre_jpg_folder ./
+
+ssh -L 5903:localhost:5903 nhcho@103.22.220.93 -p 3093
+
+python ./labelme_rev.py ./pre_jpg_folder_orig/ ./250429_1054 --labels labels_rev.txt --noviz
+
+normal : 17260
+cancer : 9952
+inf : 1823
+어쨌든 엑셀파일의 label로 따라갈 것!!!!
+
+768 512
+384 256
+
+nvidia-smi --query-compute-apps=pid --format=csv,noheader,nounits | while read pid; do
+    if [ -d "/proc/$pid" ]; then
+        uid=$(stat -c %u /proc/$pid)
+        user=$(getent passwd "$uid" | cut -d: -f1)
+        echo "USER: $user    PID: $pid"
+    fi
+done
+이걸로 GPU 사용중인 user와 PID 추적 가능
+
+awkward : 640
