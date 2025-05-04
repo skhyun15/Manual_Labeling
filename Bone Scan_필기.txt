@@ -21,9 +21,14 @@ MAS Segmentation
 
 scp -r nhcho@103.22.220.93:/projects3/pi/nhcho/Sev_WBBS/skhyun/segmentation/Manual_Label/pre_jpg_folder ./
 
+scp -P 3086 -r projects3/pi/nhcho/BS_80K_test/ nhcho@103.22.220.86:/projects1/pi/nhcho
+
 ssh -L 5903:localhost:5903 nhcho@103.22.220.93 -p 3093
 
-python ./labelme_rev.py ./pre_jpg_folder_orig/ ./250429_1054 --labels labels_rev.txt --noviz
+ssh nhcho@103.22.220.86 -p 3086
+
+
+python ./labelme_rev.py ./pre_jpg_folder_orig/ ./250503_1720 --labels labels_rev.txt --noviz
 
 normal : 17260
 cancer : 9952
@@ -43,3 +48,7 @@ done
 이걸로 GPU 사용중인 user와 PID 추적 가능
 
 awkward : 640
+
+포트별 비번
+93 PW : !dihv1902 (250502에 변경함)
+86 PW : NhCho84869!

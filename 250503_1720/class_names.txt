@@ -1,0 +1,10 @@
+_background_
+Skull
+Whole Vertebrae
+Ribs Lt
+Ribs Rt
+Humerus Lt
+Humerus Rt
+Pelvis
+Femur Lt
+Femur Rt
