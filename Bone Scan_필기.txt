@@ -1,6 +1,27 @@
 Bone Scan
 LLM 통해서 핫스팟의 해부학적 위치로 표현해주는
 
+accelerate launch 250504_ViT.py
+
+ViT가 32float로 학습되어있음..
+
+Lt. Rt.을 다 left, right으로 변경
+
+단순 이름, method, Tc-99m 다 삭제
+
+일단 너무 우유부단한 진단이 많음
+암 환자인데 PET에서 나타나던 암전이 모습이 잘 안보인다 어찌고 저찌고..흠...
+암이 있긴 한데 전에 비해서는 줄었다..
+
+항상 소견은 suggestive of bone metastasis
+suggestive of arthrisis
+이렇게...
+
+
+revised, modified 표현(수정된) 다 찾기
+
+transUNet에 class imbalance weight넣는것도 해야됨 어찌되었든 배경이 너무 많기 때문에
+
 84869#연구실
 
 템플릿 registration??
@@ -26,7 +47,6 @@ scp -P 3086 -r projects3/pi/nhcho/BS_80K_test/ nhcho@103.22.220.86:/projects1/pi
 ssh -L 5903:localhost:5903 nhcho@103.22.220.93 -p 3093
 
 ssh nhcho@103.22.220.86 -p 3086
-
 
 python ./labelme_rev.py ./pre_jpg_folder_orig/ ./250503_1720 --labels labels_rev.txt --noviz
 
