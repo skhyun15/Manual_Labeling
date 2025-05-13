@@ -3,6 +3,8 @@ LLM 통해서 핫스팟의 해부학적 위치로 표현해주는
 
 accelerate launch 250504_ViT.py
 
+허깅페이스 토큰은 dropbox BoneScan에 있음
+
 ViT가 32float로 학습되어있음..
 
 Lt. Rt.을 다 left, right으로 변경
@@ -48,7 +50,7 @@ ssh -L 5903:localhost:5903 nhcho@103.22.220.93 -p 3093
 
 ssh nhcho@103.22.220.86 -p 3086
 
-python ./labelme_rev.py ./pre_jpg_folder_orig/ ./250503_1720 --labels labels_rev.txt --noviz
+python ./labelme_rev.py ./pre_jpg_folder_orig/ ./250513_0405 --labels labels_rev.txt --noviz
 
 normal : 17260
 cancer : 9952
